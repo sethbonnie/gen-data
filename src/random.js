@@ -1,17 +1,9 @@
 const faker = require('faker')
-const _random = require('lodash/random')
-
-const generators = [
-  'number',
-  'boolean',
-  'uuid',
-  'string',
-  'locale',
-  'hexColor'
-]
+const randomInt = require('lodash/random')
 
 const random = () => {
-  const generator = generators[_random(generators.length)]
+  const generators = Object.keys(random)
+  const generator = generators[randomInt(generators.length - 1)]
   return random[generator]()
 }
 
