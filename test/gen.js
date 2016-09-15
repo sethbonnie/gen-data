@@ -8,7 +8,7 @@ describe('gen(spec)', () => {
     })
 
     it('realizes each spec in the array', () => {
-      const spec = [gen.type.internet.email, gen.type.random.number, gen.type.random.boolean]
+      const spec = [gen.random.string, gen.random.number, gen.random.boolean]
       const result = gen(spec)
 
       expect(result[0]).to.be.a('string')
@@ -33,9 +33,7 @@ describe('gen(spec)', () => {
     it('handles recursive specs correctly', () => {
       const spec = [
         {
-          name: gen.type.name.firstName,
-          phone: gen.type.phone.phoneNumber,
-          bio: gen.type.lorem.paragraph
+          name: gen.random.string
         },
         'scalar',
         () => 'function',
@@ -59,8 +57,8 @@ describe('gen(spec)', () => {
 
     it('realizes each spec in the object', () => {
       const spec = {
-        name: gen.type.name.lastName,
-        bio: gen.type.lorem.paragraph
+        name: gen.random.string,
+        bio: gen.random.string
       }
       const result = gen(spec)
       expect(result.name).to.be.a('string')
@@ -107,8 +105,8 @@ describe('gen(spec)', () => {
 
   describe('when spec is not a collection type', () => {
     it('realizes data specs', () => {
-      const name = gen(gen.type.name.firstName)
-      const email = gen(gen.type.internet.email)
+      const name = gen(gen.random.string)
+      const email = gen(gen.random.string)
       expect(name.length).to.be.at.least(1)
       expect(email.length).to.be.at.least(1)
     })
