@@ -22,5 +22,6 @@ const gen = (spec) => {
 }
 
 gen.address = require('./address')
+gen.random = require('./random')
 
 module.exports = gen
