@@ -1,5 +1,3 @@
-const address = require('./gen-address')
-
 const gen = (spec) => {
   if (typeof spec === 'number' ||
       typeof spec === 'string' ||
@@ -23,6 +21,6 @@ const gen = (spec) => {
   return result
 }
 
-gen.address = address;
+gen.address = require('./gen-address')
 
 module.exports = gen
