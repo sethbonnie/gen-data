@@ -12,7 +12,7 @@ describe('gen.address()', () => {
     // Standard meaning: street, city, state, zip
     const address = gen.address()
     expect(address).to.have.all.keys(
-      ['street', 'city', 'state', 'zipCode']
+      ['street', 'street2', 'city', 'state', 'zipCode']
     )
   })
 })

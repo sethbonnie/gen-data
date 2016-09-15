@@ -1,7 +1,8 @@
 const faker = require('faker')
 
 const address = () => ({
-  street: address.streetAddress(),
+  street: address.street(),
+  street2: address.street2(),
   city: address.city(),
   state: address.stateAbbr(),
   zipCode: address.zipCode()
