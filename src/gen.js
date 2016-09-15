@@ -21,6 +21,6 @@ const gen = (spec) => {
   return result
 }
 
-gen.address = require('./gen-address')
+gen.address = require('./address')
 
 module.exports = gen
