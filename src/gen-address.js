@@ -3,7 +3,7 @@ const faker = require('faker')
 const address = () => ({
   street: address.streetAddress(),
   city: address.city(),
-  state: address.state(),
+  state: address.stateAbbr(),
   zipCode: address.zipCode()
 })
 
@@ -23,3 +23,4 @@ address.street = address.streetAddress
 address.street2 = address.secondaryAddress
 
 module.exports = address
+
