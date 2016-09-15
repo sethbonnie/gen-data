@@ -1,4 +1,2 @@
-var gen = require('./src/gen')
-
-module.exports = gen
+module.exports = require('./src/gen')
 
