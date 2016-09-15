@@ -21,4 +21,6 @@ const gen = (spec) => {
   return result
 }
 
+gen.address = require('./gen-address')
+
 module.exports = gen
