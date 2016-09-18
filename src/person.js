@@ -6,7 +6,7 @@ const person = () => ({
   lastname: person.lastname()
 })
 
-person.username = faker.internet.userName
+person.username = person.userName = faker.internet.userName
 person.firstname = person.firstName = faker.name.firstName
 person.lastname = person.lastName = faker.name.lastName
 person.fullname = person.fullName = faker.name.findName
@@ -15,3 +15,4 @@ person.namePrefix = faker.name.prefix
 person.nameSuffix = faker.name.suffix
 
 module.exports =  person
+
