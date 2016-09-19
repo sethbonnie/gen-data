@@ -1,5 +1,5 @@
 const faker = require('faker')
-const randomInt = require('lodash/random')
+const randomInt = require('lodash.random')
 
 const lorem = () => {
   const generators = Object.keys(lorem)

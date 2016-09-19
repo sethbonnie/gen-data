@@ -1,5 +1,5 @@
 const faker = require('faker')
-const randomInt = require('lodash/random')
+const randomInt = require('lodash.random')
 
 const date = () => {
   const generators = ['future', 'past', 'recent']
