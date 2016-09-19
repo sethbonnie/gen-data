@@ -26,6 +26,7 @@ gen.date = require('./src/date')
 gen.internet = require('./src/internet')
 gen.lorem = require('./src/lorem')
 gen.person = require('./src/person')
+gen.phone = require('./src/phone')
 gen.random = require('./src/random')
 gen.system = require('./src/system')
 
