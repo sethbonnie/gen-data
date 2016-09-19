@@ -22,6 +22,7 @@ const gen = (spec) => {
 }
 
 gen.address = require('./src/address')
+gen.internet = require('./src/internet')
 gen.lorem = require('./src/lorem')
 gen.person = require('./src/person')
 gen.random = require('./src/random')
