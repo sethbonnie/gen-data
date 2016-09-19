@@ -1,7 +1,7 @@
 import gen from '..'
 import {expect} from 'chai'
 
-const paragraphPattern = /^([A-Z][a-z]+\s(\w+\s)\w+[!.?]\s?)*/
+const multiSentencePattern = /^([A-Z][a-z]+\s(\w+\s)\w+[!.?]\s?)*/
 
 describe('gen.lorem()', () => {
   it('returns a non-empty string', () => {
@@ -36,21 +36,21 @@ describe('gen.lorem.sentence()', () => {
 describe('gen.lorem.sentences()', () => {
   it('returns multiple sentences', () => {
     const sentences = gen.lorem.sentences()
-    expect(sentences).to.match(paragraphPattern)
+    expect(sentences).to.match(multiSentencePattern)
   })
 })
 
 describe('gen.lorem.paragraph()', () => {
   it('returns a paragraph', () => {
     const paragraph = gen.lorem.paragraph()
-    expect(paragraph).to.match(paragraphPattern)
+    expect(paragraph).to.match(multiSentencePattern)
   })
 })
 
 describe('gen.lorem.paragraphs()', () => {
   it('returns a paragraph', () => {
     const paragraphs = gen.lorem.paragraphs()
-    expect(paragraphs).to.match(paragraphPattern)
+    expect(paragraphs).to.match(multiSentencePattern)
   })
 })
 
@@ -69,5 +69,4 @@ describe('gen.lorem.lines()', () => {
     expect(lines).to.match(pattern)
   })
 })
-
 
