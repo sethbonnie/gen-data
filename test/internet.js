@@ -84,11 +84,11 @@ describe('gen.internet.userAgent()', () => {
   })
 })
 
-describe('gen.internet.username()', () => {
+describe('gen.internet.userName()', () => {
   it('returns a nonempty string()', () => {
-    const username = gen.internet.username()
-    expect(username).to.be.a('string')
-    expect(username).to.not.be.empty
+    const userName = gen.internet.userName()
+    expect(userName).to.be.a('string')
+    expect(userName).to.not.be.empty
   })
 })
 
@@ -99,4 +99,3 @@ describe('gen.internet.url()', () => {
     expect(url).to.match(urlPattern)
   })
 })
-
