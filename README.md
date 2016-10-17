@@ -1,8 +1,6 @@
 Gen Data
 =========
 
-`gen-data` is a library for, much like the name implies, generating data, usually for prototypes and testing.
-
 Like the name implies, `gen-data` is a library for generating data, mostly in prototyping and testing scenarios.
 
 Installation
