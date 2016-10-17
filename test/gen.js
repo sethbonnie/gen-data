@@ -29,11 +29,11 @@ describe('gen(spec)', () => {
       const spec = [1,true,undefined]
       expect(gen(spec)).to.eql(spec)
     })
-    
+
     it('handles recursive specs correctly', () => {
       const spec = [
         {
-          name: gen.random.string
+          name: gen.person.firstName
         },
         'scalar',
         () => 'function',
@@ -57,8 +57,8 @@ describe('gen(spec)', () => {
 
     it('realizes each spec in the object', () => {
       const spec = {
-        name: gen.random.string,
-        bio: gen.random.string
+        name: gen.person.fullName,
+        bio: gen.lorem.paragraphs
       }
       const result = gen(spec)
       expect(result.name).to.be.a('string')
@@ -105,8 +105,8 @@ describe('gen(spec)', () => {
 
   describe('when spec is not a collection type', () => {
     it('realizes data specs', () => {
-      const name = gen(gen.random.string)
-      const email = gen(gen.random.string)
+      const name = gen(gen.person.fullName)
+      const email = gen(gen.internet.email)
       expect(name.length).to.be.at.least(1)
       expect(email.length).to.be.at.least(1)
     })
