@@ -114,13 +114,13 @@ for (let i = 0, user; i < 3; i++) {
 API
 ----
 
-`gen(spec) : Any -> Any`
+#### `gen(spec) : Any -> Any`
 
 Takes a spec and produces data and generators which are used to describe the data that you want to generate. Generators are can be simple types (`Number`, `String`, `Boolean`, `null`, and `undefined`) which simply evaluate to themselves, collections (arrays and objects) which are iterated over recursively evaluating any nested generators or they are functions which can do a number of operations before returning a value. Essentially, you just pass the shape of what you want your data to look like to `gen()` and it takes cares of giving you something usable.
 
 ### Address
 
-`gen.address() : Object`
+#### `gen.address() : Object`
 
 Generates a random address object.
 
@@ -135,7 +135,7 @@ gen.address()
 */
 ```
 
-`gen.address.city() : String`
+#### `gen.address.city() : String`
 
 Generates a random city.
 
@@ -143,7 +143,7 @@ Generates a random city.
 gen.address.city() 		// => 'East Danikaland'
 ```
 
-`gen.address.country() : String`
+#### `gen.address.country() : String`
 
 Returns the name of a randomly selected country.
 
@@ -151,7 +151,7 @@ Returns the name of a randomly selected country.
 gen.address.country() 	// => 'Cote d\'Ivoire'
 ```
 
-`gen.address.countryCode() : String`
+#### `gen.address.countryCode() : String`
 
 Generates a random country code.
 
@@ -159,7 +159,7 @@ Generates a random country code.
 gen.address.countryCode() 	// => 'TO'
 ```
 
-`gen.address.county() : String`
+#### `gen.address.county() : String`
 
 Generates a random country.
 
@@ -167,7 +167,7 @@ Generates a random country.
 gen.address.county() 	// => 'Buckinghamshire'
 ```
 
-`gen.address.latitude() : String`
+#### `gen.address.latitude() : String`
 
 Generates a random latitude (a value ranging from -90 to 90).
 
@@ -175,7 +175,7 @@ Generates a random latitude (a value ranging from -90 to 90).
 gen.address.latitude() 	// => '48.9096'
 ```
 
-`gen.address.longitude() : String`
+#### `gen.address.longitude() : String`
 
 Generates a random longitude (a value ranging from -90 to 90).
 
@@ -184,7 +184,7 @@ gen.address.longitude() 	// => '11.8738'
 gen.address.longitude()		// => '-163.2458'
 ```
 
-`gen.address.secondaryAddress() : String`
+#### `gen.address.secondaryAddress() : String`
 
 Generates a random secondary street address.
 
@@ -192,7 +192,7 @@ Generates a random secondary street address.
 gen.address.secondaryAddress()	// => 'Suite 264'
 ```
 
-`gen.address.state() : String`
+#### `gen.address.state() : String`
 
 Generates the name of a random US state.
 
@@ -201,7 +201,7 @@ gen.address.state() 	// => 'Georgia'
 gen.address.state() 	// => 'Minnesota'
 ```
 
-`gen.address.stateAbbr() : String`
+#### `gen.address.stateAbbr() : String`
 
 Generates a random US state in abbreviated form.
 
@@ -209,7 +209,7 @@ Generates a random US state in abbreviated form.
 gen.address.stateAbbr()	// => 'AZ'
 gen.address.stateAbbr()	// => 'FL'
 ```
-`gen.address.street() : String`
+#### `gen.address.street() : String`
 
 Generates a random primary street address.
 
@@ -217,7 +217,7 @@ Generates a random primary street address.
 gen.address.street()	// => '29878 Ward Stream'
 ```
 
-`gen.address.street2() : String`
+#### `gen.address.street2() : String`
 
 Generates a random secondary street address.
 
@@ -225,7 +225,7 @@ Generates a random secondary street address.
 gen.address.street2()	// => 'Apt. 601'
 ```
 
-`gen.address.streetName() : String`
+#### `gen.address.streetName() : String`
 
 Generates the name of a street.
 
@@ -233,7 +233,7 @@ Generates the name of a street.
 gen.address.streetName()	// => 'Felton Ways'
 ```
 
-`gen.address.streetAddress() : String`
+#### `gen.address.streetAddress() : String`
 
 Generates a random street address.
 
@@ -241,7 +241,7 @@ Generates a random street address.
 gen.address.streetAddress()	// => '5769 Friesen Cape'
 ```
 
-`gen.address.zipCode() : String`
+#### `gen.address.zipCode() : String`
 
 Generates a random 5 or 9 digit zip code.
 
@@ -252,7 +252,7 @@ gen.address.zipCode()	// => '50396'
 
 ### Date
 
-`gen.date() : Date`
+#### `gen.date() : Date`
 
 Generates a random date.
 
@@ -260,7 +260,7 @@ Generates a random date.
 gen.date()	// => 2016-09-10T08:07:53.405Z
 ```
 
-`gen.date.between(minDate, maxDate) : Date`
+#### `gen.date.between(minDate, maxDate) : Date`
 
 Generates a date between the two given dates.
 
@@ -271,7 +271,7 @@ gen.date.between(minDate, maxDate)	// => 1974-05-28T04:47:25.736Z
 gen.date.between(minDate, maxDate)	// => 1971-05-26T18:10:40.182Z
 ```
 
-`gen.date.future() : Date`
+#### `gen.date.future() : Date`
 
 Generates a date in the future. I.e., a date greater than `Date.now()`.
 
@@ -280,7 +280,7 @@ new Date() 			// => 2016-10-17T01:12:42.830Z
 gen.date.future() 	// => 2017-05-02T05:00:31.965Z
 ```
 
-`gen.date.month() : String`
+#### `gen.date.month() : String`
 
 Generates the name of a random month.
 
@@ -289,7 +289,7 @@ gen.date.month()	// => 'October'
 gen.date.month()	// => 'September'
 ```
 
-`gen.date.past() : Date`
+#### `gen.date.past() : Date`
 
 Generates a date in the past. I.e, a date less than `Date.now()`.
 
@@ -298,7 +298,7 @@ new Date() 			// => 2016-10-17T01:14:49.804Z
 gen.date.past() 	// => 2016-04-16T23:25:53.662Z
 ```
 
-`gen.date.recent() : Date`
+#### `gen.date.recent() : Date`
 
 Generates a date within 24 hours of the current time.
 
@@ -308,7 +308,7 @@ gen.date.recent()	// => 2016-10-16T02:08:37.091Z
 gen.date.recent()	// => 2016-10-16T17:05:13.610Z
 ```
 
-`gen.date.weekday() : String`
+#### `gen.date.weekday() : String`
 
 Generates the name of a random weekday.
 
@@ -319,7 +319,7 @@ gen.date.weekday()	// => 'Friday'
 
 ### Internet
 
-`gen.internet.avatar() : String`
+#### `gen.internet.avatar() : String`
 
 Generates a URL for an avatar.
 
@@ -327,7 +327,7 @@ Generates a URL for an avatar.
 gen.internet.avatar() 	// => 'https://s3.amazonaws.com/uifaces/faces/twitter/stephcoue/128.jpg'
 ```
 
-`gen.internet.domain() : String`
+#### `gen.internet.domain() : String`
 
 Generates a random domain name.
 
@@ -335,7 +335,7 @@ Generates a random domain name.
 gen.internet.domain()	// => 'barbara.net'
 ```
 
-`gen.internet.email(firstName, lastName, provider) : String`
+#### `gen.internet.email(firstName, lastName, provider) : String`
 
 Generates a valid email address based on optional input criteria.
 
@@ -346,7 +346,7 @@ gen.internet.email('Fernando', undefined, 'example.com')
 // => 'Fernando_Hills56@example.com'
 ```
 
-`gen.internet.image() : String`
+#### `gen.internet.image() : String`
 
 Generates a random [lorempixel](http://lorempixel.com) url.
 
@@ -354,7 +354,7 @@ Generates a random [lorempixel](http://lorempixel.com) url.
 gen.internet.image() 	// => 'http://lorempixel.com/640/480'
 ```
 
-`gen.internet.ip() : String`
+#### `gen.internet.ip() : String`
 
 Generates a random IPv4 address.
 
@@ -362,7 +362,7 @@ Generates a random IPv4 address.
 gen.internet.ip() 		// => '19.204.38.170'
 ```
 
-`gen.internet.mac() : String`
+#### `gen.internet.mac() : String`
 
 Generates a random mac address.
 
@@ -370,7 +370,7 @@ Generates a random mac address.
 gen.internet.mac() 		// => 'e9:f8:e4:32:4f:01'
 ```
 
-`gen.internet.password(length=15, memorable=false, pattern, prefix) : String`
+#### `gen.internet.password(length=15, memorable=false, pattern, prefix) : String`
 
 Generates a random password. When `memorable` if `true`, it interleaves vowels between consonants.
 
@@ -379,7 +379,7 @@ gen.internet.password() 	// => '_ugp1jGGHuJbjcg'
 gen.internet.password(undefined, true) // => 'gakunujevotubus'
 ```
 
-`gen.internet.protocol() : String`
+#### `gen.internet.protocol() : String`
 
 Randomly generates the strings `'http'` or `'https'`.
 
@@ -387,7 +387,7 @@ Randomly generates the strings `'http'` or `'https'`.
 gen.internet.protocol() 	// => 'https'
 ```
 
-`gen.internet.tld() : String`
+#### `gen.internet.tld() : String`
 
 Generates a random domain suffix.
 
@@ -395,7 +395,7 @@ Generates a random domain suffix.
 gen.internet.tld() 		// => 'net'
 ```
 
-`gen.internet.url() : String`
+#### `gen.internet.url() : String`
 
 Generates a random URL. The URL could be secure or insecure.
 
@@ -403,7 +403,7 @@ Generates a random URL. The URL could be secure or insecure.
 gen.internet.url() 		// => 'https://shania.org'
 ```
 
-`gen.internet.userAgent() : String`
+#### `gen.internet.userAgent() : String`
 
 Generates a random user agent.
 
@@ -412,7 +412,7 @@ gen.internet.userAgent()
 // => 'Mozilla/5.0 (Windows; U; Windows NT 6.1) AppleWebKit/534.2.2 (KHTML, like Gecko) Chrome/14.0.801.0 Safari/534.2.2'
 ```
 
-`gen.internet.userName(firstName, lastName) : String`
+#### `gen.internet.userName(firstName, lastName) : String`
 
 Generates a username based on one of several patterns. The pattern is chosen randomly.
 
@@ -422,7 +422,7 @@ gen.internet.userName()	// => 'Jodie85'
 
 ### Lorem
 
-`gen.lorem() : String`
+#### `gen.lorem() : String`
 
 Randomly generates a word, phrase, sentence or paragraph.
 
@@ -433,7 +433,7 @@ gen.lorem()
 'accusamus enim rem'
 ```
 
-`gen.lorem.lines() : String`
+#### `gen.lorem.lines() : String`
 
 Generates one or more random sentences each separated by a newline (`\n`) character.
 
@@ -442,7 +442,7 @@ gen.lorem.lines()
 'Excepturi maiores quae.\nQuis facilis excepturi asperiores qui adipisci.\nUt quia voluptas quisquam adipisci et eligendi velit odio.'
 ```
 
-`gen.lorem.paragraph() : String`
+#### `gen.lorem.paragraph() : String`
 
 Generates a random paragraph of text.
 
@@ -451,7 +451,7 @@ gen.lorem.paragraph()
 'Aut sint id dolores. Vero totam cupiditate repellendus quia. Ducimus sequi suscipit natus illo eum alias quos eligendi.'
 ```
 
-`gen.lorem.paragraphs() : String`
+#### `gen.lorem.paragraphs() : String`
 
 Generates random multiple paragraphs of text separated by `\n \r`.
 
@@ -460,7 +460,7 @@ gen.lorem.paragraphs()
 'Atque quis aut rerum totam commodi consequuntur. Dolor est eaque. Tempore nobis officia. Non culpa sit vel magnam voluptatem deserunt aut.\n \rRerum explicabo consectetur maxime voluptatem neque illo hic reiciendis cum. Ut aliquam aliquam non explicabo. Aut est corporis et quia occaecati sit pariatur sint iste. Et dolorum eum velit est.\n \rQuia dolores asperiores. Quia qui eius quisquam voluptates praesentium consequuntur. A distinctio veritatis commodi distinctio magni quae sint. Reprehenderit ullam dolorem enim quam et dolor quas et. Est aut non tempora.'
 ```
 
-`gen.lorem.sentence() : String`
+#### `gen.lorem.sentence() : String`
 
 Generates a random sentence.
 
@@ -469,7 +469,7 @@ gen.lorem.sentence()
 'Enim commodi voluptas ratione velit dolores nihil eaque quia.'
 ```
 
-`gen.lorem.sentences() : String`
+#### `gen.lorem.sentences() : String`
 
 Generates multiple sentences. Effectively equal to `gen.lorem.paragraph`.
 
@@ -478,7 +478,7 @@ gen.lorem.sentences()
 'Maxime soluta quae nemo. Et et cum ipsa ut recusandae dicta rerum. Saepe aut omnis quam. Et ut quo voluptatum minus ut assumenda vitae. Omnis itaque omnis est quisquam.'
 ```
 
-`gen.lorem.text() : String`
+#### `gen.lorem.text() : String`
 
 Randomly generates a word, phrase, sentence or paragraph.
 
@@ -487,7 +487,7 @@ gen.lorem.text()
 'Voluptatem minima harum illo pariatur modi non ut.\nAut dolorem consequuntur et enim dolor.\nPraesentium nihil incidunt nemo voluptatem.'
 ```
 
-`gen.lorem.word() : String`
+#### `gen.lorem.word() : String`
 
 Generates a random word.
 
@@ -496,7 +496,7 @@ gen.lorem.word()
 'natus'
 ```
 
-`gen.lorem.words() : String`
+#### `gen.lorem.words() : String`
 
 Generates a random string of words.
 
@@ -506,7 +506,7 @@ gen.lorem.words()
 ```
 ### Person
 
-`gen.person() : Object`
+#### `gen.person() : Object`
 
 Generates a generic `person` object.
 
@@ -525,7 +525,7 @@ Generates a random first name.
 gen.person.firstName() 	// => 'Kiara'
 ```
 
-`gen.person.fullName() : String`
+#### `gen.person.fullName() : String`
 
 Generates a random full name (first and last).
 
@@ -533,7 +533,7 @@ Generates a random full name (first and last).
 gen.person.fullName()	// => 'Pinkie Ullrich'
 ```
 
-`gen.person.lastName() : String`
+#### `gen.person.lastName() : String`
 
 Generates a random last name.
 
@@ -541,7 +541,7 @@ Generates a random last name.
 gen.person.lastName() 	// => 'Monahan'
 ```
 
-`gen.person.namePrefix() : String`
+#### `gen.person.namePrefix() : String`
 
 Generates a random name prefix.
 
@@ -549,7 +549,7 @@ Generates a random name prefix.
 gen.person.namePrefix() 	// => 'Dr.'
 ```
 
-`gen.person.nameSuffix() : String`
+#### `gen.person.nameSuffix() : String`
 
 Generates a random name suffix.
 
@@ -557,7 +557,7 @@ Generates a random name suffix.
 gen.person.nameSuffix() 	// => 'Jr.'
 ```
 
-`gen.person.title() : String`
+#### `gen.person.title() : String`
 
 Generates the a random title for a person.
 
@@ -565,7 +565,7 @@ Generates the a random title for a person.
 gen.person.title() 		// => 'Dynamic Assurance Executive'
 ```
 
-`gen.person.userName() : String`
+#### `gen.person.userName() : String`
 
 Generates a username based on one of several patterns. The pattern is chosen randomly.
 
@@ -575,7 +575,7 @@ gen.person.userName()	// => 'Dayne1'
 
 ### Phone
 
-`gen.phone(format) : String`
+#### `gen.phone(format) : String`
 
 Generates a random phone number. Takes an optional format which defaults to `'(###)-###-####'` -- `#` characters are replaced with numbers in the format string.
 
@@ -587,7 +587,7 @@ gen.phone('+44 #### ### #####')	// => '+44 2270 397 29959'
 
 ### Random
 
-`gen.random() : Any`
+#### `gen.random() : Any`
 
 Generates a random value from the generators under the `gen.random` module.
 
@@ -597,7 +597,7 @@ gen.random()	// => 'pt_BR', locale
 gen.random()	// => true, boolean
 ```
 
-`gen.random.boolean() : Boolean`
+#### `gen.random.boolean() : Boolean`
 
 Generates a boolean value.
 
@@ -606,7 +606,7 @@ gen.random.boolean() 	// => true
 gen.random.boolean() 	// => false
 ```
 
-`gen.random.hexColor() : String`
+#### `gen.random.hexColor() : String`
 
 Generates a random color in hex form.
 
@@ -614,7 +614,7 @@ Generates a random color in hex form.
 gen.random.hexColor() 	// => '#364e07'
 ```
 
-`gen.random.locale() : String`
+#### `gen.random.locale() : String`
 
 Generates a random locale
 
@@ -622,7 +622,7 @@ Generates a random locale
 gen.random.locale() 	// => 'fr_CA'
 ```
 
-`gen.random.number(max) : Number`
+#### `gen.random.number(max) : Number`
 
 Generates a random integer up to an optional max.
 
@@ -636,7 +636,7 @@ gen.random.string(3) 	// => 'P0a'
 gen.random.string(20) 	// => 'QloEmpKriDgYCcJqZyzH'
 ```
 
-`gen.random.uuid() : String`
+#### `gen.random.uuid() : String`
 
 Generates a random `UUID`.
 
@@ -646,7 +646,7 @@ gen.random.uuid()		// => '6bb1c37c-33a5-4398-a9b6-dcb47c04f90e'
 
 ### System
 
-`gen.system.commonFileExt() : String`
+#### `gen.system.commonFileExt() : String`
 
 Generates a random, yet common, file extension.
 
@@ -654,7 +654,7 @@ Generates a random, yet common, file extension.
 gen.system.commonFileExt()		// => 'html'
 ```
 
-`gen.system.commonFileName() : String`
+#### `gen.system.commonFileName() : String`
 
 Generates a random, yet common, file name.
 
@@ -663,7 +663,7 @@ gen.system.commonFileName()		// => 'fresh.mpeg'
 gen.system.commonFileName() 	// => 'parse.png'
 ```
 
-`gen.system.commonFileType() : String`
+#### `gen.system.commonFileType() : String`
 
 Generates a random, yet common, file type.
 
@@ -672,7 +672,7 @@ gen.system.commonFileType()		// => 'audio'
 gen.system.commonFileType()		// => 'application'
 ```
 
-`gen.system.fileExt() : String`
+#### `gen.system.fileExt() : String`
 
 Generates a random file extension.
 
@@ -681,7 +681,7 @@ gen.system.fileExt()	// => 'clkt'
 gen.system.fileExt()	// => 'pdb'
 ```
 
-`gen.system.fileName() : String`
+#### `gen.system.fileName() : String`
 
 Generates a random file name.
 
@@ -690,7 +690,7 @@ gen.system.fileName()	// => 'generic.mk3d'
 gen.system.fileName() 	// => 'maximized_reciprocal.xsl'
 ```
 
-`gen.system.fileType() : String`
+#### `gen.system.fileType() : String`
 
 Generates a random file type.
 
@@ -699,7 +699,8 @@ gen.system.fileType()	// => 'video'
 gen.system.fileType()	// => 'chemical'
 ```
 
-`gen.system.mimeType() : String`
+#### `gen.system.mimeType() : String`
+
 Generates a random mime type.
 
 ```js
@@ -707,7 +708,8 @@ gen.system.mimeType()	// => 'application/vnd.xfdl'
 gen.system.mimeType()	// => 'audio/vmr-wb'
 ```
 
-`gen.system.semver() : String`
+#### `gen.system.semver() : String`
+
 Generates a random semver string.
 
 ```js
