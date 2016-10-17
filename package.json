@@ -1,6 +1,6 @@
 {
   "name": "gen-data",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Generate some good ol data",
   "main": "index.js",
   "directories": {
